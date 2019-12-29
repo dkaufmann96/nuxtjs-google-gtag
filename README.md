@@ -1,10 +1,14 @@
-# @zenika/nuxtjs-google-gtag
+# @dkaufmann96/nuxtjs-google-gtag
 
-This is a fork of [@nuxtjs/google-gtag](https://github.com/nuxt-community/google-gtag).
+This is a fork of [@zenika/nuxtjs-google-gtag](https://github.com/nuxt-community/google-gtag).
+
+This fork adds a function to remove the gtag script tag via javascript.
+
+The documentation of the forked repository follows.
 
 With the original lib, the gtag script tag is added through the nuxt config and rendered on the server-side. This is problematic because it means gtag is unconditionally run on the client, even though it adds a cookie on the visitor's computer without their consent, which is illegal in the European Union.
 
-With this fork, the client-side application can control when the gtag script is added to the page, enabling the application developper to correctly implement the law.
+With this fork, the client-side application can control when the gtag script is added to the page, enabling the application developer to correctly implement the law.
 
 To begin tracking, typically after the visitor has given their consent, call `this.$enableGtagTracking()` in any component.
 
